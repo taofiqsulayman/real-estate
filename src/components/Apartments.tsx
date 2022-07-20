@@ -4,6 +4,7 @@ import { Badge, Box, Icon, Image, Tag } from '@chakra-ui/react';
 
 import {BiBed, BiBath} from 'react-icons/bi';
 import {FaToilet} from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 
 type ApProps = {
@@ -26,9 +27,10 @@ const Apartments: React.FC<ApProps> = ({ apartments }) => {
             overflow='hidden' 
             fontWeight="semibold"
             margin={5}>
-              <Image src={image} alt={id} borderRadius="lg" />
+              <Link to={`/house/${id}`}>
+                <Image src={image} alt={id} borderRadius="lg" />
 
-              <Box p='2'>
+                <Box p='2'>
                 <Box display='flex' flexDir="row" justifyContent="space-between" >
                   <p>Lagos, NG</p>
                   
@@ -57,9 +59,9 @@ const Apartments: React.FC<ApProps> = ({ apartments }) => {
                   <p>₦30,000,000</p>
                 </Box>
 
-              </Box>
-            </Box>
-
+                </Box>
+              </Link>  
+            </Box>     
         );
       })}
     </>
