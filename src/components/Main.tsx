@@ -5,6 +5,7 @@ import Apartments from './Apartments'
 import { Box, Center } from '@chakra-ui/react'
 import TopTabs from './Tabs'
 import Header from './Header'
+import Footer from './Footer'
 
 
 function Main() {
@@ -31,12 +32,26 @@ function Main() {
       justifyContent='centre' 
       alignItems='center'
       mt='10%'
+      mb='5%'
       ml='8%'
       padding={5}>
         <Apartments apartments={apartments} />
       </Box>
 
-    </Center>
+      </Center>
+
+      <Box
+      backgroundColor='white'
+      display='flex'
+      flexDir='column'
+      width='100%'
+      justifyContent='center'
+      position='fixed'
+      bottom={0}
+      pt={5}>
+        <Footer />
+      </Box>
+
     </>
 
 

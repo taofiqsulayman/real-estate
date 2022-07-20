@@ -2,7 +2,7 @@
 export default [
   {
     id: 1,
-    status: 'new',
+    status: 'NEW',
     image: 'https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?auto=compress&cs=tinysrgb&w=1600',
   },
   {
