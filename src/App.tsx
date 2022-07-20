@@ -14,7 +14,7 @@ function App() {
       backgroundColor='white'
       display='flex'
       flexDir='column'
-      alignItems='center'
+      
       width='100%'
       justifyContent='center'
       position='fixed'>
@@ -28,7 +28,7 @@ function App() {
       flexWrap='wrap' 
       justifyContent='centre' 
       alignItems='center'
-      mt='8%'
+      mt='10%'
       ml='8%'
       padding={5}>
         <Apartments apartments={apartments} />

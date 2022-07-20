@@ -1,11 +1,18 @@
-import { Box, Divider, Heading, Icon, IconButton, Input, Select } from '@chakra-ui/react';
+import { Avatar, Box, Divider, Heading, Icon, IconButton, Input, Select, Stack } from '@chakra-ui/react';
 import {TbNorthStar} from 'react-icons/tb';
 import {GoSearch} from 'react-icons/go'
+import {MdArrowDropDown} from 'react-icons/md'
+import {MdOutlineKeyboardArrowDown} from 'react-icons/md'
 
 
 const Header = () => {
   return (
-    <Box display='flex' flexDir='row' alignItems='center' >
+    <Box pl={10}
+    pr={10}
+    display='flex' 
+    flexDir='row' 
+    alignItems='center' 
+    justifyContent='space-between' >
       <Box display='flex' flexDir='row' alignItems='center'>
       <IconButton
       m={5}
@@ -15,14 +22,25 @@ const Header = () => {
       <Heading>AGENTLY</Heading>
       </Box>
 
-      <Box display='flex' flexDir='row' alignItems='center' border='1.5px' borderRadius='lg'>
-      <Select width='xs' placeholder='Rent'>
+      <Box display='flex' 
+      flexDir='row' 
+      alignItems='center'
+      borderWidth='1.5px' 
+      borderRadius='lg'>
+      <Select icon={<MdArrowDropDown />}>
         <option value='option1'>Rent</option>
       </Select>
       <Divider orientation='vertical'/>
       <Input placeholder='Where do you want to live?' />
       <Icon as={GoSearch} />
       </Box>
+
+      <Stack fontWeight='semibold' alignItems='center' direction='row'>
+
+        <p>Own a property?</p>
+        <Avatar src='https://bit.ly/broken-link' />
+        <Icon as={MdOutlineKeyboardArrowDown} />
+      </Stack>
       
     </Box>
   )
