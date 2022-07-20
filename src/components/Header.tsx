@@ -32,7 +32,7 @@ const Header = () => {
       </Select>
       <Divider orientation='vertical'/>
       <Input placeholder='Where do you want to live?' />
-      <Icon as={GoSearch} />
+      <IconButton icon={<GoSearch />} aria-label='search' />
       </Box>
 
       <Stack fontWeight='semibold' alignItems='center' direction='row'>

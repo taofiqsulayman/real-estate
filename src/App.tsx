@@ -1,46 +1,25 @@
+import { Route, Routes } from 'react-router-dom';
+import './App.css'
 
-import { useState } from 'react'
-import data from './Data'
-import Apartments from './components/Apartments'
-import { Box, Center } from '@chakra-ui/react'
-import TopTabs from './components/Tabs'
-import Header from './components/Header'
+import { Container } from '@chakra-ui/react';
+import Main from './components/Main';
+import HouseDetails from './components/HouseDetails';
+
 function App() {
-  const [apartments, setApartments] = useState(data)
+
+
+
   return (
-
     <>
-      <Box
-      backgroundColor='white'
-      display='flex'
-      flexDir='column'
-      
-      width='100%'
-      justifyContent='center'
-      position='fixed'>
-        <Header />
-        <TopTabs />
-      </Box>
-      <Center display='flex' flexDir='column' >
-
-      <Box display="flex"
-      flexDir='row'  
-      flexWrap='wrap' 
-      justifyContent='centre' 
-      alignItems='center'
-      mt='10%'
-      ml='8%'
-      padding={5}>
-        <Apartments apartments={apartments} />
-      </Box>
-
-    </Center>
+      <Container maxW="8xl">
+    
+        <Routes>
+          <Route path='/' element={<Main />} />
+          <Route path='/house/:id' element={<HouseDetails />} />
+        </Routes> 
+      </Container>
     </>
-
-
-
-
-  )
+  );
 }
 
-export default App
+export default App;
